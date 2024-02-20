@@ -1,5 +1,5 @@
 {
-	"name": "pipeline3",
+	"name": "dynamic_file_path",
 	"properties": {
 		"activities": [
 			{
@@ -89,6 +89,9 @@
 					"orders.csv"
 				]
 			}
+		},
+		"folder": {
+			"name": "dynamic_file_path"
 		},
 		"annotations": []
 	}
