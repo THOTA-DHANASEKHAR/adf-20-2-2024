@@ -5,18 +5,11 @@
 			{
 				"name": "ForEach1",
 				"type": "ForEach",
-				"dependsOn": [
-					{
-						"activity": "Set variable1",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Copy data1').output",
+						"value": "@variables('filename')",
 						"type": "Expression"
 					},
 					"activities": [
@@ -86,28 +79,15 @@
 						}
 					]
 				}
-			},
-			{
-				"name": "Set variable1",
-				"type": "SetVariable",
-				"dependsOn": [],
-				"policy": {
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"variableName": "filename",
-					"value": [
-						"customer.csv",
-						"orders.csv"
-					]
-				}
 			}
 		],
 		"variables": {
 			"filename": {
-				"type": "Array"
+				"type": "Array",
+				"defaultValue": [
+					"customer.csv",
+					"orders.csv"
+				]
 			}
 		},
 		"annotations": []
