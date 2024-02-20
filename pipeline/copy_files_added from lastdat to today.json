@@ -1,5 +1,5 @@
 {
-	"name": "pipeline2",
+	"name": "copy_files_added from lastdat to today",
 	"properties": {
 		"activities": [
 			{
@@ -73,6 +73,9 @@
 			"starttime": {
 				"type": "String"
 			}
+		},
+		"folder": {
+			"name": "copy_files_added from lastday to today"
 		},
 		"annotations": []
 	}
