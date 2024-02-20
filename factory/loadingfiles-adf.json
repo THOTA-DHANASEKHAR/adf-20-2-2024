@@ -1,0 +1,9 @@
+{
+	"name": "loadingfiles-adf",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "71191434-78ee-47a4-bbfa-9b0491a64b62",
+		"tenantId": "2dc67ee3-3164-4bdc-b34d-979a4950672b"
+	}
+}
