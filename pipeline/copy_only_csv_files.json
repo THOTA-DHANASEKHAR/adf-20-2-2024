@@ -62,6 +62,9 @@
 				]
 			}
 		],
+		"folder": {
+			"name": "copy_only_csv_files"
+		},
 		"annotations": []
 	}
 }

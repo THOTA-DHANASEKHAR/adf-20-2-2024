@@ -230,6 +230,9 @@
 				"type": "String"
 			}
 		},
+		"folder": {
+			"name": "get_latest_modifiedfiles"
+		},
 		"annotations": []
 	}
 }

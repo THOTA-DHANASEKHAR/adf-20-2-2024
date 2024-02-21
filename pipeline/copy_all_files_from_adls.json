@@ -1,5 +1,5 @@
 {
-	"name": "copy_all_customerfile",
+	"name": "copy_all_files_from_adls",
 	"properties": {
 		"activities": [
 			{
@@ -20,7 +20,7 @@
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
-							"wildcardFileName": "customer_*",
+							"wildcardFileName": "*",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
@@ -50,20 +50,20 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "src_ds_all_custmerfiles",
+						"referenceName": "src_ds_all_adlsfiles",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "tgt_ds_allcustomerfiles",
+						"referenceName": "tgt_ds_all_adlsfiles",
 						"type": "DatasetReference"
 					}
 				]
 			}
 		],
 		"folder": {
-			"name": "copy_all_customerfiles"
+			"name": "copy_all_files_from_adls"
 		},
 		"annotations": []
 	}
