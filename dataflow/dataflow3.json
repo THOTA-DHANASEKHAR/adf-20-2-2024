@@ -1,0 +1,50 @@
+{
+	"name": "dataflow3",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "dataset_dataflows",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [],
+			"transformations": [],
+			"scriptLines": [
+				"source(output(",
+				"          {Product type} as string,",
+				"          SKU as string,",
+				"          Price as string,",
+				"          Availability as string,",
+				"          {Number of products sold} as string,",
+				"          {Revenue generated} as string,",
+				"          {Customer demographics} as string,",
+				"          {Stock levels} as string,",
+				"          {Lead times} as string,",
+				"          {Order quantities} as string,",
+				"          {Shipping times} as string,",
+				"          {Shipping carriers} as string,",
+				"          {Shipping costs} as string,",
+				"          {Supplier name} as string,",
+				"          Location as string,",
+				"          {Lead time} as string,",
+				"          {Production volumes} as string,",
+				"          {Manufacturing lead time} as string,",
+				"          {Manufacturing costs} as string,",
+				"          {Inspection results} as string,",
+				"          {Defect rates} as string,",
+				"          {Transportation modes} as string,",
+				"          Routes as string,",
+				"          Costs as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source1"
+			]
+		}
+	}
+}
