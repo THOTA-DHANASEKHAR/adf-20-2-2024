@@ -1,5 +1,5 @@
 {
-	"name": "copy_files_that are not in target",
+	"name": "handling_emptyfiles",
 	"properties": {
 		"activities": [
 			{
@@ -142,7 +142,7 @@
 			}
 		},
 		"folder": {
-			"name": "copy_files_that are not in target"
+			"name": "handling_emptyfiles"
 		},
 		"annotations": []
 	}
