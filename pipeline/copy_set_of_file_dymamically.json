@@ -1,5 +1,5 @@
 {
-	"name": "dynamic_file_path",
+	"name": "copy_set_of_file_dymamically",
 	"properties": {
 		"activities": [
 			{
@@ -91,7 +91,7 @@
 			}
 		},
 		"folder": {
-			"name": "dynamic_file_path"
+			"name": "copy_set_of_file_dymamically"
 		},
 		"annotations": []
 	}
