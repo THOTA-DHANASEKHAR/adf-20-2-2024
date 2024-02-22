@@ -5,6 +5,9 @@
 			"referenceName": "AzureDataLakeStorage1",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "source_get_size"
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {

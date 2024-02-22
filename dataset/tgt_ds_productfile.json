@@ -5,6 +5,9 @@
 			"referenceName": "AzureDataLakeStorage1",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "tgt_ds_product_file"
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {

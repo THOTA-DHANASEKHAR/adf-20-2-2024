@@ -10,6 +10,9 @@
 				"type": "string"
 			}
 		},
+		"folder": {
+			"name": "source_ds"
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {

@@ -5,6 +5,9 @@
 			"referenceName": "AzureDataLakeStorage1",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "src_ds_delete_aftrcopy"
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {

@@ -5,6 +5,9 @@
 			"referenceName": "AzureDataLakeStorage1",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "gmdt_ds"
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
