@@ -24,6 +24,7 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -104,6 +105,9 @@
 				"type": "Integer",
 				"defaultValue": 0
 			}
+		},
+		"folder": {
+			"name": "copy_files_based on count"
 		},
 		"annotations": []
 	}
