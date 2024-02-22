@@ -1,5 +1,5 @@
 {
-	"name": "delete-after_copy",
+	"name": "delete-after_copyfile",
 	"properties": {
 		"activities": [
 			{
@@ -16,36 +16,23 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "DelimitedTextSource",
+						"type": "BinarySource",
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
-							"enablePartitionDiscovery": false
+							"deleteFilesAfterCompletion": true
 						},
 						"formatSettings": {
-							"type": "DelimitedTextReadSettings"
+							"type": "BinaryReadSettings"
 						}
 					},
 					"sink": {
-						"type": "DelimitedTextSink",
+						"type": "BinarySink",
 						"storeSettings": {
 							"type": "AzureBlobFSWriteSettings"
-						},
-						"formatSettings": {
-							"type": "DelimitedTextWriteSettings",
-							"quoteAllText": true,
-							"fileExtension": ".txt"
 						}
 					},
-					"enableStaging": false,
-					"translator": {
-						"type": "TabularTranslator",
-						"typeConversion": true,
-						"typeConversionSettings": {
-							"allowDataTruncation": true,
-							"treatBooleanAsNumber": false
-						}
-					}
+					"enableStaging": false
 				},
 				"inputs": [
 					{
@@ -55,7 +42,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "target_ds_delete_after_copy",
+						"referenceName": "tgt_ds_delete_aftrcopy",
 						"type": "DatasetReference"
 					}
 				]
