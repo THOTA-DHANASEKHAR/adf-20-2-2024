@@ -5,6 +5,9 @@
 			"referenceName": "AzureDataLakeStorage1",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "tgt_ds_delete_aftrcopy"
+		},
 		"annotations": [],
 		"type": "Binary",
 		"typeProperties": {

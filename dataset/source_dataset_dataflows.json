@@ -1,5 +1,5 @@
 {
-	"name": "dataset_dataflows",
+	"name": "source_dataset_dataflows",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",
