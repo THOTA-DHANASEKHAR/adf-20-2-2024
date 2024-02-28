@@ -1,0 +1,16 @@
+{
+	"name": "src_ds_deltaload",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Oracle1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "OracleTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "HR",
+			"table": "EMPLOYEE"
+		}
+	}
+}
