@@ -104,6 +104,42 @@
 									"type": "DatasetReference"
 								}
 							]
+						},
+						{
+							"name": "Lookup2",
+							"type": "Lookup",
+							"dependsOn": [
+								{
+									"activity": "Copy data1",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"source": {
+									"type": "OracleSource",
+									"oracleReaderQuery": {
+										"value": "update control_table set status = 'true' where table_name = '@{item().TABLE_NAME}';\nselect 'rt' from dual;\n",
+										"type": "Expression"
+									},
+									"partitionOption": "None",
+									"convertDecimalToInteger": false,
+									"queryTimeout": "02:00:00"
+								},
+								"dataset": {
+									"referenceName": "status_update",
+									"type": "DatasetReference"
+								}
+							}
 						}
 					]
 				}
