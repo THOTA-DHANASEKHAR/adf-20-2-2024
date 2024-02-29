@@ -1,0 +1,20 @@
+{
+	"name": "source_linkedin_Json",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "linkedin.json",
+				"folderPath": "linkedin",
+				"fileSystem": "source"
+			}
+		},
+		"schema": {}
+	}
+}

@@ -1,0 +1,40 @@
+{
+	"name": "dataflow4",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"linkedService": {
+						"referenceName": "AzureDataLakeStorage1",
+						"type": "LinkedServiceReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [],
+			"transformations": [],
+			"scriptLines": [
+				"source(output(",
+				"          {_attachments} as string,",
+				"          {_etag} as string,",
+				"          {_rid} as string,",
+				"          {_self} as string,",
+				"          {_ts} as integer,",
+				"          airportCode as (airportCode as string, airportName as string, countryCode as string, portCode as short, updateTimestamp as string),",
+				"          id as string",
+				"     ),",
+				"     useSchema: false,",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false,",
+				"     format: 'json',",
+				"     fileSystem: 'source',",
+				"     folderPath: 'linkedin',",
+				"     fileName: 'linkedin.json',",
+				"     documentForm: 'singleDocument',",
+				"     backslashEscape: true) ~> source1"
+			]
+		}
+	}
+}
