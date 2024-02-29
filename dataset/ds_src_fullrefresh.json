@@ -1,0 +1,16 @@
+{
+	"name": "ds_src_fullrefresh",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Oracle1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "OracleTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "CTXSYS",
+			"table": "CTX_CLASSES"
+		}
+	}
+}
