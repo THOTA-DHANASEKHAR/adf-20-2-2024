@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "OracleSource",
-						"oracleReaderQuery": "select * from table where date >= sysdate -1",
+						"oracleReaderQuery": "select * from table where date >= (sysdate) -1;",
 						"partitionOption": "None",
 						"queryTimeout": "02:00:00"
 					},

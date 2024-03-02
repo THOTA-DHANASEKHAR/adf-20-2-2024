@@ -1,0 +1,36 @@
+{
+	"name": "copy_last_month records",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "OracleSource",
+						"oracleReaderQuery": "SELECT *\nFROM Employee\nWHERE \n    JOIN_DATE >= TRUNC(ADD_MONTHS(SYSDATE, -1),  'MONTH')\nAND \n    JOIN_DATE <= LAST_DAY(ADD_MONTHS(SYSDATE, -1)); ",
+						"partitionOption": "None",
+						"queryTimeout": "02:00:00"
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "ds_src_fullrefresh",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}
