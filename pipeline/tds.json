@@ -1,0 +1,25 @@
+{
+	"name": "tds",
+	"properties": {
+		"activities": [
+			{
+				"name": "Web1",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "POST",
+					"url": " POST https://management.azure.com/subscriptions/4b7c33b7-6409-4b66-8d2b-c16d87ae2c4e/resourceGroups/TDS_GROUP/providers/Microsoft.DataFactory/factories/loadingfiles-adf/queryPipelineRuns?api-version=2018-06-01"
+				}
+			}
+		],
+		"annotations": []
+	}
+}
