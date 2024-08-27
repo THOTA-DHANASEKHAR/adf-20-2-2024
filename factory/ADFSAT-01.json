@@ -1,0 +1,9 @@
+{
+	"name": "ADFSAT-01",
+	"location": "southindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "7fc43d9d-4190-45fa-8b27-dc93245d61c9",
+		"tenantId": "724a5dbe-79d3-4f27-90d5-157ce61dd79d"
+	}
+}
